@@ -36,6 +36,5 @@ phpunit.phar
 /api/runtime
 /backend/runtime
 /frontend/runtime
-/environments
 /tests
 requirements.php
