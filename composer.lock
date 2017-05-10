@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5772c93ce1deda0b40c6836b75a15502",
+    "content-hash": "34e00441c458e3b69079c2cd955abc28",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -336,6 +336,49 @@
                 "yii"
             ],
             "time": "2013-12-10T17:49:58+00:00"
+        },
+        {
+            "name": "changyuan/yii2-authclient",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/changyuan/yii2-authclient.git",
+                "reference": "d5f13fe8c85331cd58d4c4a0777ca29d1052505a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/changyuan/yii2-authclient/d5f13fe8c85331cd58d4c4a0777ca29d1052505a.zip",
+                "reference": "d5f13fe8c85331cd58d4c4a0777ca29d1052505a",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2-authclient": "~2.1.0"
+            },
+            "type": "composer-pllugin",
+            "autoload": {
+                "psr-4": {
+                    "changyuan\\authclient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "changcrazy",
+                    "email": "changocean@163.com"
+                }
+            ],
+            "description": "yii2-authclient for qq weibo wechat",
+            "keywords": [
+                "OpenId",
+                "api",
+                "auth",
+                "oauth",
+                "yii2"
+            ],
+            "time": "2017-05-10T04:02:13+00:00"
         },
         {
             "name": "dmstr/yii2-adminlte-asset",

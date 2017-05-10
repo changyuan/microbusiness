@@ -57,20 +57,20 @@ return [
                     'clientId' => 'facebook_client_id',
                     'clientSecret' => 'facebook_client_secret',
                 ],
-                'qq' => [
-                    'class'=>'frontend\widgets\QQClient',
-                    'clientId'=>'your_qq_clientid',
-                    'clientSecret'=>'your_qq_secret'
-                ],
                 'weibo' => [
-                    'class'=>'frontend\widgets\WeiboClient',
-                    'clientId'=>'your_qq_clientid',
-                    'clientSecret'=>'your_qq_secret'
+                    'class' => 'changyuan\authclient\clients\Weibo',
+                    'clientId' => 'wb_key',
+                    'clientSecret' => 'wb_secret',
+                ],
+                'qq' => [
+                    'class' => 'changyuan\authclient\clients\QQ',
+                    'clientId' => 'qq_appid',
+                    'clientSecret' => 'qq_appkey',
                 ],
                 'wechat' => [
-                    'class'=>'frontend\widgets\WeiboClient',
-                    'clientId'=>'wxf1a005fc07e44615',
-                    'clientSecret'=>'c848028904798a49f1b25c31ee821827'
+                    'class' => 'changyuan\authclient\clients\Wechat',
+                    'clientId' => 'weixin_appid',
+                    'clientSecret' => 'weixin_appkey',
                 ],
             ],
         ],

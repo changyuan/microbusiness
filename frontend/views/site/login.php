@@ -37,10 +37,12 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 
-    <?= yii\authclient\widgets\AuthChoice::widget([
-         'baseAuthUrl' => ['site/auth']
-    ]) ?>
 
-    <a href="/site/auth?authclient=qq">使用QQ快速登录</a>
-    <a href="/site/auth?authclient=weibo">使用weibo快速登录</a>
+    <div class="row">
+        <div class="col-lg-5">
+            <?= yii\authclient\widgets\AuthChoice::widget([
+                 'baseAuthUrl' => ['site/auth'],
+            ]) ?>
+        </div>
+    </div>
 </div>
