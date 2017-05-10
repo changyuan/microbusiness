@@ -7,16 +7,30 @@ use common\enum\CodeEnum;
 use yii\helpers\ArrayHelper;
 
 /**
- * 默认控制器
+ * 订单
  */
-class DefaultController extends ApiController
+class OrderController extends ApiController
 {
 
 
+	/**
+	 * 订单列表
+	 */
 	public function actionIndex()
 	{
 		
 
+		return $this->response('12');
+	}
+
+
+	/**
+	 * 订单详情
+	 */
+	public function actionInfo()
+	{
+		
+		
 		return $this->response('12');
 	}
 

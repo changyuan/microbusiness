@@ -7,9 +7,9 @@ use common\enum\CodeEnum;
 use yii\helpers\ArrayHelper;
 
 /**
- * 默认控制器
+ * 品牌
  */
-class DefaultController extends ApiController
+class BrandController extends ApiController
 {
 
 

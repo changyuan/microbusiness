@@ -15,7 +15,7 @@ class ApiController extends Controller
 
 	public $enableCsrfValidation = false;
 	
-	protected $latestVersion = "1.1.2";
+	protected $latestVersion = "1.0.0";
 	
     public function actions()
     {
