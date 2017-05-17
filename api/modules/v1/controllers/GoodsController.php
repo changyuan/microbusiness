@@ -18,10 +18,14 @@ class GoodsController extends ApiController
 	public function actionAdd()
 	{
 		
-		$request = Yii::$app->request;
-		$image = $request->post();
 
-		return $this->response('12');
+		
+		$request = Yii::$app->request;
+		$image = $request->post("image",'');
+		$number = $request->post('number','');
+
+
+		return $this->response('add');
 	}
 
 
@@ -32,7 +36,7 @@ class GoodsController extends ApiController
 	{
 		
 
-		return $this->response('12');
+		return $this->response('del');
 	}
 
 	/**
@@ -42,7 +46,7 @@ class GoodsController extends ApiController
 	{
 		
 
-		return $this->response('12');
+		return $this->response('index');
 	}
 
 
@@ -53,7 +57,7 @@ class GoodsController extends ApiController
 	{
 		
 
-		return $this->response('12');
+		return $this->response('info');
 	}
 
 

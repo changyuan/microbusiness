@@ -74,13 +74,6 @@ return [
                 ],
             ],
         ],
-        // 'view' => [
-        //      'theme' => [
-        //          'pathMap' => [
-        //             '@frontend/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
-        //          ],
-        //      ],
-        // ],
     ],
     'params' => $params,
 ];
