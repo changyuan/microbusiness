@@ -5,6 +5,7 @@ namespace api\modules\v1\controllers;
 use Yii;
 use common\enum\CodeEnum;
 use yii\helpers\ArrayHelper;
+use common\services\UtilTrait;
 
 /**
  * 默认控制器
@@ -27,10 +28,18 @@ class DefaultController extends ApiController
 		// $request = Yii::$app->request;
 		// $image = $request->post("image",'');
 
-		$imgs = $this->uploadMorePics($_FILES,'@web/upload/');
+		// $imgs = $this->uploadMorePics($_FILES,'@web/upload/');
+		// echo Yii::getAlias("@webroot");exit;
+		// 
+		if (!isset($_FILES['image'])) {
+			return $this->response(CodeEnum::$paramError);
+		}
+		$target_path = Yii::getAlias("@webroot")."/upload/".date("Y")."/".date("m")."/";
+		$visit_path = Yii::$app->params['PIC_HOST_URL']."/upload/".date("Y")."/".date("m")."/";
 
-		CodeEnum::$success['data'] = $imgs;
-		return $this->response(CodeEnum::$success);
+		$res = $this->uploadPicForMe($_FILES['image'], $target_path, $visit_path);
+		
+		return $this->response($res);
 
 	}
 

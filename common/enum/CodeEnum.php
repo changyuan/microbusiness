@@ -16,5 +16,6 @@ class CodeEnum
     public static $denyVisit=array(self::CODE=>-103,self::MSG=>'非法的请求');
     public static $needLogin=array(self::CODE=>-104,self::MSG=>'请登录');
     public static $noData=array(self::CODE=>-105,self::MSG=>'没有了');
+    public static $paramError=array(self::CODE=>-106,self::MSG=>'参数错误');
 
 }
