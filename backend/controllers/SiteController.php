@@ -178,9 +178,4 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
-    public function actionError() {
-
-        die("error");
-    }
 }

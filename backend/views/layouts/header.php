@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 <header class="main-header">
 
-    <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+    <?= Html::a('<span class="logo-mini">'.Yii::$app->name.'</span><span class="logo-lg"><b>' . Yii::$app->name . '</b></span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
 
     <nav class="navbar navbar-static-top" role="navigation">
 
@@ -229,18 +229,26 @@ use yii\helpers\Html;
 
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <!-- <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="user-image" alt="User Image"/> -->
-                        <span style="background-color:#fff; border: 1px solid #ccc; border-radius: 3px;  width:25px; height: 25px;  display: inline-block;"><?= strtoupper(mb_substr(Yii::$app->user->identity->username, 0,1));?></span>
-                        <span class="hidden-xs"><?= Yii::$app->user->identity->username;?></span>
+                        <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
+                        <span class="hidden-xs">
+                        <?php if (!Yii::$app->user->isGuest): ?>
+                             <?= Yii::$app->user->identity->username;?>
+                        <?php else: ?>
+                            Guest
+                        <?php endif ?>
+                       </span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <!-- <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/> -->
-                            <span style="background-color:#fff; border: 1px solid #ccc; border-radius: 3px;  width:50px; height: 50px; display: inline-block;"><?= strtoupper(mb_substr(Yii::$app->user->identity->username, 0,1));?></span>
-
+                            <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
                             <p>
-                                <?= Yii::$app->user->identity->username;?> - Web Developer
+                                 <?php if (!Yii::$app->user->isGuest): ?>
+                                     <?= Yii::$app->user->identity->username;?>
+                                <?php else: ?>
+                                    Guest
+                                <?php endif ?>
+                                - Web Developer
                                 <small>Member since Nov. 2017</small>
                             </p>
                         </li>
@@ -259,11 +267,11 @@ use yii\helpers\Html;
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="/admin/user/change-password" class="btn btn-default btn-flat">修改密码</a>
                             </div>
                             <div class="pull-right">
                                 <?= Html::a(
-                                    'Sign out',
+                                    '退出',
                                     ['/site/logout'],
                                     ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
                                 ) ?>
