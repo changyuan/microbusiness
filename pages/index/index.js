@@ -1,6 +1,8 @@
 //index.js
 //获取应用实例
-var app = getApp()
+var app = getApp();
+var config = require("../../config");
+var qcloud = require('../../bower_components/wafer-client-sdk/index');
 Page({
   data: {
     motto: 'Click Demo!',
@@ -53,6 +55,33 @@ Page({
     wx.navigateTo({
       url: '../goods/index',
     })
+  },
+  testSession: function(){
+    // 设置登录地址
+    // qcloud.setLoginUrl('https://199447.qcloud.la/login');
+    qcloud.setLoginUrl(config.service.loginUrl);
+    qcloud.login({
+      success: function (userInfo) {
+        console.log('登录成功', userInfo);
+      },
+      fail: function (err) {
+        console.log('登录失败', err);
+      }
+    });
+  },
+  testRequest: function() {
+    qcloud.setLoginUrl(config.service.loginUrl);
+    qcloud.request({
+      login:true,
+      // url: 'http://199447.qcloud.la/user',
+      url: config.service.loginUrl,
+      success: function (response) {
+        console.log(response);
+      },
+      fail: function (err) {
+        console.log(err);
+      }
+    });
   },
   onLoad: function () {
     // console.log('onLoad')

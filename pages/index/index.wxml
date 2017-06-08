@@ -15,8 +15,11 @@
       <button class="zan-btn zan-btn--small" bindtap="addGoodsTap">添加商品</button>
       <button class="zan-btn zan-btn--small" bindtap="goodsListTap">商品列表</button>
       <button class="zan-btn zan-btn--small" bindtap="goodsListTap">录音</button>
+
+      <button class="zan-btn zan-btn--small" bindtap="testSession">测试会话</button>
+      <button class="zan-btn zan-btn--small" bindtap="testRequest">测试请求</button>
     </view>
 
   </view>
-  
+
 </view>
