@@ -1,0 +1,9 @@
+<template name="nav">
+  <text>{{nav}}</text>
+</template>
+<template name="header">
+  <text>header</text>
+</template>
+<template name="footer">
+  <text>footer</text>
+</template>

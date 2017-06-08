@@ -1,0 +1,9 @@
+<view class="userinfo">
+  <text>{{useraddress}}</text>
+</view>
+<view class="usermotto">
+  <button class="user-motto" bindtap="chooseAddress">调取用户地址</button>
+</view>
+<view class="usermotto">
+  <button class="user-motto" bindtap="openLocation">调取位置</button>
+</view>

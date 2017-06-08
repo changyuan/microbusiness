@@ -1,0 +1,62 @@
+
+<!--pages/index/about.wxml-->
+<view class="container">
+  <form>
+
+    <!--<view class="page-body-form">
+        <picker range="{{sourceType}}" bindchange="sourceTypeChange" value="{{sourceTypeIndex}}">
+          <view class="page-body-form-picker">
+            <view class="page-body-form-picker-key">图片来源</view>
+            <view class="page-body-form-picker-value">{{sourceType[sourceTypeIndex]}}</view>
+          </view>
+        </picker>
+        <picker range="{{sizeType}}" bindchange="sizeTypeChange" value="{{sizeTypeIndex}}">
+          <view class="page-body-form-picker">
+            <view class="page-body-form-picker-key">图片质量</view>
+            <view class="page-body-form-picker-value">{{sizeType[sizeTypeIndex]}}</view>
+          </view>
+        </picker>
+        <picker range="{{count}}" bindchange="countChange" value="{{countIndex}}">
+          <view class="page-body-form-picker" style="border-bottom: none;">
+            <view class="page-body-form-picker-key">数量限制</view>
+            <view class="page-body-form-picker-value">{{count[countIndex]}}</view>
+          </view>
+        </picker>
+      </view>-->
+
+    <view class="images-wrapper">
+      <text class="images-text">请上传商品图片</text>
+      <view class="images-list">
+        <block wx:for="{{imageList}}" wx:for-item="image">
+          <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
+        </block>
+        <view class="images-image image-plus" bindtap="chooseImage">
+          <view class="image-plus-horizontal"></view>
+          <view class="image-plus-vertical"></view>
+        </view>
+      </view>
+    </view>
+
+      <!--<view class="section section_gap">
+        <text class="section__title">商品数量</text>
+        <view class="body-view">
+          <slider bindchange="productNumberChange" step="1" show-value="true" min='1' max='10000'/>
+        </view>
+      </view>-->
+
+      
+      <view class="product-number">
+        <text class="images-text">商品数量</text>
+        <view class="product-number-btn">
+          <button bindtap="minusNumber"> - </button>
+          <input type="number" placeholder="请输入商品数量" confirm-type="next" value="{{productNumber}}" maxlength="6"/>
+          <button bindtap="addNumber"> + </button>
+        </view>
+      </view>
+
+    
+    <view class="btn">
+      <button class="user-motto" bindtap="genShare">生成并分享</button>
+    </view>
+  </form>
+</view>

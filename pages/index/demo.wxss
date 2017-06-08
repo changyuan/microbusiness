@@ -1,0 +1,68 @@
+/* pages/index/demo.wxss */
+.num_text{
+    display: flex;
+    flex-direction: row;
+}
+.scroll-view-item{
+    height: 200px;
+}
+.scroll-view_H {
+    height: 200px;
+    display: flex;
+    white-space:nowrap;
+    /*flex-flow: row nowrap;*/
+    /*justify-content: center;*/
+    /*align-items:flex-start;*/
+}
+.scroll-view-item_H {
+    height: 200px;
+    width: 750rpx;
+    display: inline-block;
+}
+.section__title {
+    padding: 10px;
+}
+.bc_green{
+    background-color: green;
+    order: 3;
+}
+.bc_red {
+    background-color: red;
+    order: 1;
+}
+.bc_yellow {
+    background-color: yellow;
+    order:2;
+}
+.bc_blue {
+    background-color: blue;
+    order:0;
+}
+
+.flex-item {
+    flex: 1;
+}
+.flex-item:nth-of-type(2) {
+    flex: 2;
+    order:3;
+}
+.hitclass {
+    background-color:blueviolet;
+    color:blueviolet;
+    font-size: 18px;
+}
+
+.button-hover {
+  background-color: red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}
+.section{
+    
+}
+
+.section__title{
+    color: #ccc;   
+}

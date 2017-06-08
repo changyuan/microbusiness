@@ -1,0 +1,28 @@
+<import src="/component/zanui/quantity/index.wxml" />
+
+<view class="container">
+    <view class="zan-panel images-wrapper">
+      <text class="images-text">请上传商品图片</text>
+      <view class="images-list">
+        <block wx:for="{{imageList}}" wx:for-item="image">
+          <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
+        </block>
+        <view class="images-image image-plus" bindtap="chooseImage">
+          <view class="image-plus-horizontal"></view>
+          <view class="image-plus-vertical"></view>
+        </view>
+      </view>
+    </view>
+     <view class="zan-panel">
+     <text class="images-text">库存</text>
+      <template is="zan-quantity" data="{{ ...quantity, componentId: 'quantity' }}" />
+    </view>
+    <view class="zan-panel">
+       <button class="zan-btn" bindtap="scanCode">扫码</button>
+    </view>
+    <view class="zan-panel">
+      <button class="zan-btn zan-btn--small" bindtap="upload">上传</button>
+      <button class="zan-btn zan-btn--small zan-btn--primary" bindtap="uploadAndShare">上传并分享</button>
+      <button class="zan-btn zan-btn--small" bindtap="goback">返回</button>
+    </view>
+</view>
