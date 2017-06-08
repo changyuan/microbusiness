@@ -1,1 +1,3 @@
 baseurl: /tests
+
+theme: jekyll-theme-dinky
