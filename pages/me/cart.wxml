@@ -1,2 +1,5 @@
-<!--pages/me/cart.wxml-->
-<text>pages/me/cart.wxml</text>
+<view class="page">
+    <view class="goods">
+     
+    </view>
+</view>

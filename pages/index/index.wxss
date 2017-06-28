@@ -19,3 +19,7 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.weui-btn {
+  margin-left: 5px;
+}

@@ -1,25 +1,27 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
+<view class="page">
+  <view bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
 
-   <view class="zan-panel">
-    <view class="zan-btns">
-      <button class="zan-btn zan-btn--small" bindtap="tagTap">标签页</button>
-      <button class="zan-btn zan-btn--small" bindtap="contactTap">联系我</button>
-      <button class="zan-btn zan-btn--small" bindtap="aboutTap">关于我</button>
-      <button class="zan-btn zan-btn--small" bindtap="meTap">ME</button>
+  <view class="weui-cells">
+    <view class="page__bd page__bd_spacing">
+      <button class="weui-btn" type="primary" size="mini" bindtap="tagTap">标签页</button>
+      <button class="weui-btn" type="default" size="mini" bindtap="contactTap">联系我</button>
+      <button class="weui-btn" size="mini" bindtap="aboutTap">关于我</button>
+      <button class="weui-btn" size="mini" bindtap="meTap">ME</button>
 
-      <button class="zan-btn zan-btn--small" bindtap="addGoodsTap">添加商品</button>
-      <button class="zan-btn zan-btn--small" bindtap="goodsListTap">商品列表</button>
-      <button class="zan-btn zan-btn--small" bindtap="goodsListTap">录音</button>
+      <button class="weui-btn" size="mini" bindtap="addGoodsTap">添加商品</button>
+      <button class="weui-btn" size="mini" bindtap="goodsListTap">商品列表</button>
+      <button class="weui-btn" size="mini" bindtap="goodsListTap">录音</button>
 
-      <button class="zan-btn zan-btn--small" bindtap="testSession">测试会话</button>
-      <button class="zan-btn zan-btn--small" bindtap="testRequest">测试请求</button>
+      <button class="weui-btn" size="mini" bindtap="testSession">测试会话</button>
+      <button class="weui-btn" size="mini" bindtap="testRequest">测试请求</button>
+      <button class="weui-btn" size="mini"  bindtap="openMap">地图</button>
+      <!--<contact-button class="weui-btn" type="default-light" size="20" session-from="weapp" bindtap="enterSession">会话btn</contact-button>-->
     </view>
 
   </view>
-
+  <include src="/pages/layout/footer.wxml" />
 </view>

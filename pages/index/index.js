@@ -14,15 +14,15 @@ Page({
       url: '../logs/logs'
     })
   },
-  tagTap: function() {
+  tagTap: function () {
     wx.navigateTo({
       url: 'tag',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
-  contactTap : function() {
+  contactTap: function () {
     wx.navigateTo({
       url: 'contact',
       success: function (res) {
@@ -51,12 +51,12 @@ Page({
       url: '../goods/add',
     })
   },
-  goodsListTap: function() {
+  goodsListTap: function () {
     wx.navigateTo({
       url: '../goods/index',
     })
   },
-  testSession: function(){
+  testSession: function () {
     // 设置登录地址
     // qcloud.setLoginUrl('https://199447.qcloud.la/login');
     qcloud.setLoginUrl(config.service.loginUrl);
@@ -69,10 +69,10 @@ Page({
       }
     });
   },
-  testRequest: function() {
+  testRequest: function () {
     qcloud.setLoginUrl(config.service.loginUrl);
     qcloud.request({
-      login:true,
+      login: true,
       // url: 'http://199447.qcloud.la/user',
       url: config.service.loginUrl,
       success: function (response) {
@@ -94,5 +94,10 @@ Page({
       })
       //console.log(userInfo)
     })
-  }
+  },
+  openMap: ()=>{
+    wx.navigateTo({
+      url: 'map',
+    })
+  },
 })

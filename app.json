@@ -5,6 +5,7 @@
     "pages/index/tag",
     "pages/index/contact",
     "pages/index/about",
+    "pages/index/map",
     "pages/logs/logs",
 
     "pages/goods/index",
@@ -21,7 +22,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "orange",
     "navigationBarTitleText": "ChangCrazy's Blog",
     "navigationBarTextStyle": "black",
     "backgroundColor":"#ffffff",
@@ -51,7 +52,7 @@
       "selectedIconPath": "image/icon_pressed.png"
     }],
     "position":"bottom",
-    "color": "red",
+    "color": "grey",
     "borderStyle": "#ccc"
   },
   "networkTimeout": {

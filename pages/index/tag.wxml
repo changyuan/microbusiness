@@ -1,2 +1,7 @@
-<!--pages/index/tag.wxml-->
-<text>pages/index/tag.wxml</text>
+<view class="page">
+  <view class="page__hd">asdfad</view>
+  <view class="weui-cells">
+    <view class="haha">测试</view>
+        <button class="weui-btn">button</button>
+  </view>
+</view>

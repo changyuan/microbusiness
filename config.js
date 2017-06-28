@@ -2,7 +2,8 @@
  * 配置文件
  * 通信带参数，https://github.com/tencentyun/wafer-client-sdk
  */
-var host = 'dev.api.wesh.com/v1';
+// var host = 'dev.api.wesh.com/v1';
+var host = 'wx.51goal.club/v1';
 
 var config = {
 
