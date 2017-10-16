@@ -6,9 +6,14 @@ use Yii;
 use common\enum\CodeEnum;
 use yii\helpers\ArrayHelper;
 use common\services\UtilTrait;
+use Swagger\Annotations as SWG;
 
 /**
- * 默认控制器
+ * @SWG\Swagger(
+ *   schemes={"http"},
+ *   host="example.com",
+ *   basePath="/api"
+ * )
  */
 class DefaultController extends ApiController
 {
@@ -72,5 +77,61 @@ class DefaultController extends ApiController
 		return $this->response(CodeEnum::$success);
 
 	}
+
+	 /**
+     * @SWG\Get(
+     *     path="/pet/findByTags",
+     *     summary="Finds Pets by tags",
+     *     tags={"pet"},
+     *     description="Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
+     *     operationId="findPetsByTags",
+     *     produces={"application/xml", "application/json"},
+     *     @SWG\Parameter(
+     *         name="tags",
+     *         in="query",
+     *         description="Tags to filter by",
+     *         required=true,
+     *         type="array",
+     *         @SWG\Items(type="string"),
+     *         collectionFormat="multi"
+     *     ),
+     *     @SWG\Response(
+     *         response=200,
+     *         description="successful operation",
+     *         @SWG\Schema(
+     *             type="array",
+     *             @SWG\Items(ref="#/definitions/Pet")
+     *         ),
+     *     ),
+     *     @SWG\Response(
+     *         response="400",
+     *         description="Invalid tag value",
+     *     ),
+     *     security={
+     *         {
+     *             "petstore_auth": {"write:pets", "read:pets"}
+     *         }
+     *     },
+     *     deprecated=true
+     * )
+     */
+    public function actionDoc()
+    {
+
+    }
+
+
+    //生成swg json 并且访问
+	public function actionGenSwg()
+	{
+	    $swagger = \Swagger\scan(Yii::getAlias('@api'));
+	    $json_file = Yii::getAlias('@webroot') . '/swagger-docs/swagger.json';
+	    $is_write = file_put_contents($json_file, $swagger);
+	    if ($is_write == true) {
+	       return $this->redirect('/swagger-ui/index.html');
+	    }
+	}
+
+
 
 }
